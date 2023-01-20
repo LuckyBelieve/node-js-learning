@@ -90,3 +90,21 @@ const Logger = require('./logger');
 })
 
 logger.myNames('ineza Lucky Believe');
+
+const names = 'lucky Believe';
+
+const http = require('http');
+const server = http.createServer((req,res) => {
+    if(req.url ==='/'){
+        res.write('you\'re welcome '+names);
+        res.end();
+    }
+    if(req.url === '/api/login'){
+        res.write('welcome to our login page');
+        res.end();
+    }
+})
+
+server.listen(4000);
+
+console.log('listening on port 4000....');
