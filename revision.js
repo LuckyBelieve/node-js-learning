@@ -17,7 +17,7 @@ p.then((message) =>{
 // let's start with reminding ourselves how to raise an event and how to handle that event in the node
 
 const EventEmitter = require('events');
-
+ let myName = "Ineza Lucky Believe";
 class Lucky extends EventEmitter{
     mynames(names){
         console.log('my names are '+names);
@@ -26,3 +26,21 @@ class Lucky extends EventEmitter{
 }
 
 module.exports = Lucky;
+
+const http = require('http');
+
+  const server = http.createServer((req,res)=>{
+    if(req.url === '/'){
+        res.write('Hello '+myName);
+        res.end();
+    }
+    if(req.url === '/api/courses'){
+        res.write(myName+' you\'re welcome to courses\' page');
+        res.end();
+    }
+
+    
+})
+server.listen('5000')
+
+console.log('the server is listening on port 5000');
