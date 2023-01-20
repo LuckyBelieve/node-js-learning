@@ -7,4 +7,12 @@ class Logger extends EventEmitter{
     }
 }
 
-module.exports = Logger;
+module.exports.Logger = Logger;
+
+class Joker extends EventEmitter{
+    myNames(names){
+        console.log('my names are '+names);
+        this.emit('message recieved',{id:20,location:320});
+    }
+}
+module.exports.Joker = Joker;
