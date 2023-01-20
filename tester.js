@@ -1,14 +1,27 @@
-const Logger = require('./testing')
-const logger = new Logger();
+const tester = require('./testing')
+
+ const Logger = tester.Logger;
+ const logger = new Logger();
+ 
 
 logger.on('messagelogged',(arg) => {
     console.log('message logged successfully ',arg);
 })
 logger.myId('ineza Lucky Believe');
 
-myName = 'Ineza Lucky Believe';
 
 
+const Joker = tester.Joker;
+  const joker = new Joker();
+  
+  joker.on('message recieved',(arg) => {
+    console.log('message well received ',arg);
+  })
+
+  joker.myNames('ineza Lucky Believe');
+
+  const myName = 'Ineza Lucky Believe';
+  
 const http = require('http');
 const server = http.createServer((req,res) =>{
     if (req.url === '/'){
