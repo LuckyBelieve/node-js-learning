@@ -33,7 +33,7 @@ const os = require('os');
 var totalMemory = os.totalmem();
 var freeMemory = os.freemem();
 
-// console.log(`total memory: ${totalMemory} and the free space : ${freeMemory}`);
+console.log(`total memory: ${totalMemory} and the free space : ${freeMemory}`);
 
 // file system module
 //let's load our fs module
