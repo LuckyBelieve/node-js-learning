@@ -47,10 +47,10 @@ let p = new Promise((resolve, reject) => {
     if(lucky == 15+'years old'){
         resolve('he is still young');
     }
-    if(happy == 14+'years old'){
-        resolve('she is still young');
-    }else{
-        reject('you\'re not allowed to come to games');
+    if(happy == 14+'years old'){       
+    resolve('she is still young');
+    }else{   
+    reject('you\'re not allowed to come to games');
     }
 }).then((message)=>{
     console.log(message);
